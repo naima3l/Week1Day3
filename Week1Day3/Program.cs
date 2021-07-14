@@ -10,7 +10,20 @@ namespace Week1Day3
             //Routine();
 
             //Createarray();
+            //ExerciseArray();
 
+            //Random per generare numeri casuali
+            Random random = new Random();
+            int ranNumber = random.Next(10, 21);
+            Console.WriteLine($"E' stato generato casualmente il numero {ranNumber}");
+
+            
+
+
+        }
+
+        private static void ExerciseArray()
+        {
             //Indovina valore: Creare e inizializzare un array di interi dimensione N=4;
             //Chiedere all'utente di provare ad indovinare un numero. Verificare se il numero inserito dall'utente c'è nell'array
             //Se c'è stampa "hai vinto", se non c'è stampa "Hai perso".
@@ -22,8 +35,8 @@ namespace Week1Day3
             {
                 Console.WriteLine("Scelta errata. Devi inserire un itero.");
             }
-            int index = Array.IndexOf(arrayGuess,guess);
-            if(index == -1)
+            int index = Array.IndexOf(arrayGuess, guess);
+            if (index == -1)
             {
                 Console.WriteLine("Mi dispice! Hai perso.");
             }
@@ -32,8 +45,6 @@ namespace Week1Day3
                 Console.WriteLine("Congratulazioni! Hai vinto!");
                 Console.WriteLine($"Il numero che hai indovinato si trova in posizione {index}");
             }
-
-
         }
 
         private static void CreateArray()
